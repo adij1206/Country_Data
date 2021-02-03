@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:background="#F2F4F3"
+    tools:context=".CountryDetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:padding="6dp"
+                android:id="@+id/imageview"
+                android:layout_width="100dp"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_height="100dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textColor="#303030"
+                    android:id="@+id/name"
+                    android:text="Name"
+                    android:textStyle="bold|italic"
+                    android:textSize="25sp"
+                    android:paddingStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/region"
+                    android:paddingStart="5dp"
+                    android:text="Region"
+                    android:textColor="#3A3A55"
+                    android:textSize="22sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="#ffffff"
+            android:id="@+id/capital_text"
+            android:text="Capital :-"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/cardview"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:background="#ffffff"
+            android:textColor="@android:color/black"
+            android:id="@+id/capital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardview"
+            android:layout_marginTop="10dp"
+            android:text="Capital"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_below="@+id/ll1"
+        android:id="@+id/ll2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="#ffffff"
+            android:id="@+id/subregion_text"
+            android:text="SubRegion :-"
+            android:textSize="20sp"
+            android:layout_below="@+id/capital"
+            android:layout_marginTop="10dp"
+            android:layout_width="140dp"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:background="#ffffff"
+            android:id="@+id/subregion"
+            android:text="SubRegion"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_below="@+id/capital"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:padding="5dp"
+        android:layout_below="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="#ffffff"
+            android:textColor="@android:color/black"
+            android:id="@+id/population_text"
+            android:text="Population :-"
+            android:textSize="20sp"
+            android:layout_below="@+id/subregion"
+            android:layout_marginTop="10dp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:background="#ffffff"
+            android:id="@+id/population"
+            android:text="Population"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_below="@+id/subregion"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:padding="5dp"
+        android:id="@+id/border_cardview"
+        android:layout_below="@+id/ll3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp">
+
+        <TextView
+            android:background="#FFA012"
+            android:id="@+id/borders"
+            android:text="Borders  "
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_below="@+id/population"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="5dp"
+        android:id="@+id/recyler_border"
+        android:orientation="horizontal"
+        android:layout_below="@+id/border_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/language_cardview"
+        android:layout_below="@+id/recyler_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:cardCornerRadius="5dp">
+            <TextView
+                android:id="@+id/language"
+                android:text="Language"
+                android:background="#FFA012"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_below="@+id/recyler_border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="5dp"
+        android:id="@+id/recycler_language"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/language_cardview"/>
+
+</RelativeLayout>
