@@ -1,9 +1,11 @@
-package com.aditya.countrydata;
+package com.aditya.countrydata.Model;
 
 import java.io.Serializable;
 
 public class Language implements Serializable {
     private String iso639_1,iso639_2,name,nativeName;
+
+    public Language(){}
 
     public Language(String iso639_1, String iso639_2, String name, String nativeName) {
         this.iso639_1 = iso639_1;

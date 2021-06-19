@@ -1,9 +1,18 @@
-package com.aditya.countrydata;
+package com.aditya.countrydata.Model;
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import com.aditya.countrydata.Model.Language;
 
 import java.io.Serializable;
 import java.util.List;
 
+@Entity
 public class Country implements Serializable {
+    @PrimaryKey(autoGenerate = true)
+    public int id;
+
     private String name;
     private String capital;
     private String region;

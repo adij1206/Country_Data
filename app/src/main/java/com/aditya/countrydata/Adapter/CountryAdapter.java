@@ -10,20 +10,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.aditya.countrydata.Country;
+import com.aditya.countrydata.Model.Country;
 import com.aditya.countrydata.CountryDetailActivity;
 import com.aditya.countrydata.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHolder> {
 
     private Context context;
-    private List<Country> countryList;
+    private List<Country> countryList = new ArrayList<>();
 
-    public CountryAdapter(Context context, List<Country> countryList) {
+    public CountryAdapter(Context context) {
         this.context = context;
-        this.countryList = countryList;
     }
 
     @NonNull
@@ -41,6 +41,11 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
     @Override
     public int getItemCount() {
         return countryList.size();
+    }
+
+    public void post(List<Country> countryList){
+        this.countryList=countryList;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -76,4 +81,6 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
 
         }
     }
+
+
 }

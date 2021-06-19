@@ -1,6 +1,6 @@
 package com.aditya.countrydata.Retrofit;
 
-import com.aditya.countrydata.Country;
+import com.aditya.countrydata.Model.Country;
 
 import java.util.List;
 

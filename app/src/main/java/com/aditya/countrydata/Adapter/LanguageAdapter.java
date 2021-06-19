@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.aditya.countrydata.Language;
+import com.aditya.countrydata.Model.Language;
 import com.aditya.countrydata.R;
 
 import java.util.List;

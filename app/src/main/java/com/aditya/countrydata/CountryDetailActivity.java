@@ -4,12 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aditya.countrydata.Adapter.BorderAdapter;
 import com.aditya.countrydata.Adapter.LanguageAdapter;
+import com.aditya.countrydata.Model.Country;
+import com.aditya.countrydata.Model.Language;
+import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou;
 
 import java.util.List;
 
@@ -42,7 +47,9 @@ public class CountryDetailActivity extends AppCompatActivity {
             q+="We Doesnot Share Border With Any Country";
         }
 
-        Utils.fetchSvg(this, country.getFlag(), imageView);
+        //Utils.fetchSvg(this, country.getFlag(), imageView);
+        GlideToVectorYou.justLoadImage((Activity) this,
+                Uri.parse(country.getFlag()) , imageView);
 
         name.setText(country.getName());
         capital.setText( country.getCapital());
